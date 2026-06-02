@@ -10,43 +10,45 @@ namespace DotNETDoc
     {
         public static void Main()
         {
-            ChildExample childExample=new ChildExample();
-            childExample.Add(1, 2);
-            childExample.Add(1, 2, 3); 
-            childExample.Sub(5, 4);
-            childExample.Mul(6, 7);
-        }
-        public class ParentExample
-        {
-            public void Add(int a, int b)
-            {
-                Console.WriteLine("a+b= "+(a+b));
-            }
-            public virtual void Sub(int m, int n)
-            {
-                Console.WriteLine("m-n= " + (m - n));
+            ChildPolymorphismExample childPolymorphismExample = new ChildPolymorphismExample();
+            childPolymorphismExample.Add(1, 2);
+            childPolymorphismExample.Add(1, 2, 3);
 
-            }
-            public void Mul(int x, int y)
-            {
-                Console.WriteLine("e*f= " + (x * y));
+            childPolymorphismExample.Sub(5, 4);
 
-            }
+            childPolymorphismExample.Mul(5, 6);
         }
-        public class ChildExample:ParentExample
+    }
+
+    public class ParentPolymorphismExample
+    {
+        public void Add(int a, int b)
         {
-            public void Add(int a,int b,int c)
-            {
-                Console.WriteLine("(Overloading) a+b+c= " + (a + b + c));
-            }
-            public override void Sub(int m, int n)
-            {
-                Console.WriteLine("(Overriding) m-n2= " + (m-n));
-            }
-            public new void Mul(int x, int y)
-            {
-                Console.WriteLine("(Method Hiding) x*y2= "+(x * y));
-            }
+            Console.WriteLine($"Method Overloading First a+b={a + b}");
+        }
+        public virtual void Sub(int a, int b)
+        {
+            Console.WriteLine($"Method Overriding First a-b={a - b}");
+        }
+        public void Mul(int a, int b)
+        {
+            Console.WriteLine($"Method Hiding First a*b={a * b}");
+        }
+    }
+
+    public class ChildPolymorphismExample : ParentPolymorphismExample
+    {
+        public void Add(int a, int b, int c)
+        {
+            Console.WriteLine($"Method Overloading Second a+b+c={a + b + c}");
+        }
+        public override void Sub(int a, int b)
+        {
+            Console.WriteLine($"Method Overriding Second a-b={a - b}");
+        }
+        public new void Mul(int a, int b)
+        {
+            Console.WriteLine($"Method Hiding Second a*b={a * b}");
         }
     }
 }
