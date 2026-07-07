@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>DotNETDoc.Classes.SealedClasses.TestSEC</StartupObject>
+    <StartupObject>DotNETDoc.DependencyInjections.MethodDI.TestMDI</StartupObject>
   </PropertyGroup>
 
 </Project>

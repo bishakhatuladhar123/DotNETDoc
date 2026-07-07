@@ -12,19 +12,18 @@ namespace DotNETDoc.Classes.StaticClasses
         public static string StudentName;
 
         //static constructor
-         static StudentSCExample()
+        static StudentSCExample()
         {
-
+            StudentName = "Bishakha";
         }
+
         //static method
         public static void Method1()
         {
-
+            Console.WriteLine("Method1");
         }
     }
 
-    public class TeacherExample//:StudentSCExample
-    {
-
-    }
+    //public class TeacherSC:StudentSCExample//static class cannot inherited.
+    //{}
 }

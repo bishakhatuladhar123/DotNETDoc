@@ -10,8 +10,8 @@ namespace DotNETDoc.Classes.StaticClasses
     {
         public static void Main()
         {
-            //StudentSCExample studentSCExample = new StudentSCExample();
-            StudentSCExample.Method1();
+            //StudentSCExample studentSCExample = new StudentSCExample();// cannot instantiated
+            StudentSCExample.Method1();//directly instantiated to class name.
         }
     }
 }
