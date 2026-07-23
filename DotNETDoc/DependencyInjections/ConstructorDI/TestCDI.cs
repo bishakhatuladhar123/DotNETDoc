@@ -11,7 +11,10 @@ namespace DotNETDoc.DependencyInjections.ConstructorDI
         public static void Main()
         {
             IStudentServiceCDI iStudentServiceCDI = new ScienceStudentCDI();
+
+
             FirstControllerCDI firstControllerCDI = new FirstControllerCDI(iStudentServiceCDI);
+
             SecondControllerCDI secondControllerCDI = new SecondControllerCDI(iStudentServiceCDI);
             firstControllerCDI.Index();
             secondControllerCDI.Index();

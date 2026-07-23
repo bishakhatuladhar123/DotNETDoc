@@ -15,7 +15,12 @@ namespace DotNETDoc.DependencyInjections.MethodDI
             FirstControllerMDI firstControllerMDI = new FirstControllerMDI();
             SecondControllerMDI secondControllerMDI = new SecondControllerMDI();
 
-            firstControllerMDI.Index(iStudentServiceMDI);
+
+            firstControllerMDI.Index();
+            firstControllerMDI.Detail(iStudentServiceMDI);
+            firstControllerMDI.Report(iStudentServiceMDI);
+
+
             secondControllerMDI.Index(iStudentServiceMDI);
         }
     }

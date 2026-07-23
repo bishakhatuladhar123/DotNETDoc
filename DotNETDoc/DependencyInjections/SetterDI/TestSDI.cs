@@ -11,9 +11,13 @@ namespace DotNETDoc.DependencyInjections.SetterDI
         public static void Main()
         {
             FirstControllerSDI firstControllerSDI = new FirstControllerSDI();
-            SecondControllerSDI secondControllerSDI = new SecondControllerSDI();    
-            firstControllerSDI.iStudentServiceSDI=new MathStudentSDI();
-            secondControllerSDI.iStudentServiceSDI=new MathStudentSDI();
+            SecondControllerSDI secondControllerSDI = new SecondControllerSDI();
+
+            firstControllerSDI.Index(); //shows MathStudent count
+            secondControllerSDI.Index();//shows MathStudent count
+
+            firstControllerSDI.iStudentServiceSDI=new ScienceStudentSDI();
+            secondControllerSDI.iStudentServiceSDI=new ScienceStudentSDI();
 
             firstControllerSDI.Index();
             secondControllerSDI.Index();    

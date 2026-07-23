@@ -8,7 +8,15 @@ namespace DotNETDoc.DependencyInjections.MethodDI
 {
     public class FirstControllerMDI
     {
-        public void Index(IStudentServiceMDI iStudentServiceMDI)
+        public void Index()
+        {
+            Console.WriteLine("Method Dependency Injection Index");
+        }
+        public void Detail(IStudentServiceMDI iStudentServiceMDI)
+        {
+            iStudentServiceMDI.GetStudentCount();
+        }
+        public void Report(IStudentServiceMDI iStudentServiceMDI)
         {
             iStudentServiceMDI.GetStudentCount();
         }
